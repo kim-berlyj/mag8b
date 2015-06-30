@@ -4,18 +4,19 @@
 # ask user if they have another question or if they would like to exit
 
 # return random answer to user
-my_file=open("response.rtf")
+my_file=open("response.txt")
 responses=my_file.readlines()
 my_file.close()
-# responses2=responses.strip("\n")
+# responses2=responses.strip()
 import random
 question=raw_input("Do you have a question for me? ")
 
 def response():
-	while (question=="yes"):
+	while (question=="yes" or question=="Yes"):
 		raw_input("What is your question? ")
 		print random.choice(responses)
-		if (raw_input("Do you have another question? ")=="no"):
+		question1=raw_input("Do you have another question? ")
+		if (question1=="no" or question1=="No"):
 			print "Goodbye"
 			return
 		else:
