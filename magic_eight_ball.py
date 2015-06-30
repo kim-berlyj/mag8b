@@ -7,7 +7,6 @@
 my_file=open("response.txt")
 responses=my_file.readlines()
 my_file.close()
-# responses2=responses.strip()
 import random
 question=raw_input("Do you have a question for me? ")
 
@@ -18,7 +17,7 @@ def response():
 		question1=raw_input("Do you have another question? ")
 		if (question1=="no" or question1=="No"):
 			print "Goodbye"
-			return
+			exit()
 		else:
 			response()
 
