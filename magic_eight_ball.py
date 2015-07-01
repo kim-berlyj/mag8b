@@ -18,8 +18,11 @@ def response():
 		if (question1=="no" or question1=="No"):
 			print "Goodbye"
 			exit()
-		else:
+		elif (question1=="yes" or question1=="Yes"):
 			response()
+		else:
+			print "Goodbye"
+			exit()
 
 response()
 
